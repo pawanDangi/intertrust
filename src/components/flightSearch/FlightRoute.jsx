@@ -125,6 +125,7 @@ class FlightRoute extends Component {
     } = this.state;
     let { flights, classes, flightType } = this.props;
     flights = flights.map(f => {
+      f.value = f.code;
       f.label = `${f.name}, ${f.city}(${f.code})`;
       return f;
     })
